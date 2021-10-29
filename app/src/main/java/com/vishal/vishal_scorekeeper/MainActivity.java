@@ -67,38 +67,42 @@ public class MainActivity extends AppCompatActivity
 
         /* Based on the radio button selection store the points to increase or decrease
             in the variable teamRedScore. (For team RED) */
-        switch(pointsRedGroup.getCheckedRadioButtonId()){
-            case R.id.scoreSixRbRed: //if(checkedButton == R.id.scoreSixRbRed)
-                teamRedScore = 6;
-                break;
-            case R.id.scoreThreeRbRed: //else if(checkedButton == R.id.scoreThreeRbRed)
-                teamRedScore = 3;
-                break;
-            case R.id.scoreTwoRbRed: //else if(checkedButton == R.id.scoreTwoRbRed)
-                teamRedScore = 2;
-                break;
-            case R.id.scoreOneRbRed: //else if(checkedButton == R.id.scoreOneRbRed)
-            default: // else
-                teamRedScore = 1;
-                break;
+        if (view.getId() == R.id.btnTeamRedScoreDec || view.getId() == R.id.btnTeamRedScoreInc ) {
+            switch(pointsRedGroup.getCheckedRadioButtonId()){
+                case R.id.scoreSixRbRed: //if(checkedButton == R.id.scoreSixRbRed)
+                    teamRedScore = 6;
+                    break;
+                case R.id.scoreThreeRbRed: //else if(checkedButton == R.id.scoreThreeRbRed)
+                    teamRedScore = 3;
+                    break;
+                case R.id.scoreTwoRbRed: //else if(checkedButton == R.id.scoreTwoRbRed)
+                    teamRedScore = 2;
+                    break;
+                case R.id.scoreOneRbRed: //else if(checkedButton == R.id.scoreOneRbRed)
+                default: // else
+                    teamRedScore = 1;
+                    break;
+            }
         }
 
         /* Based on the radio button selection store the points to increase or decrease
             in the variable teamBlueScore. (For team BLUE) */
-        switch(pointsBlueGroup.getCheckedRadioButtonId()){
-            case R.id.scoreSixRbBlue: //if(checkedButton == R.id.scoreSixRbBlue)
-                teamBlueScore = 6;
-                break;
-            case R.id.scoreThreeRbBlue: //else if(checkedButton == R.id.scoreThreeRbBlue)
-                teamBlueScore = 3;
-                break;
-            case R.id.scoreTwoRbBlue: //else if(checkedButton == R.id.scoreTwoRbBlue)
-                teamBlueScore = 2;
-                break;
-            case R.id.scoreOneRbBlue: //else if(checkedButton == R.id.scoreOneRbBlue)
-            default: // else
-                teamBlueScore = 1;
-                break;
+        if (view.getId() == R.id.btnTeamBlueScoreDec || view.getId() == R.id.btnTeamBlueScoreInc ) {
+            switch (pointsBlueGroup.getCheckedRadioButtonId()) {
+                case R.id.scoreSixRbBlue: //if(checkedButton == R.id.scoreSixRbBlue)
+                    teamBlueScore = 6;
+                    break;
+                case R.id.scoreThreeRbBlue: //else if(checkedButton == R.id.scoreThreeRbBlue)
+                    teamBlueScore = 3;
+                    break;
+                case R.id.scoreTwoRbBlue: //else if(checkedButton == R.id.scoreTwoRbBlue)
+                    teamBlueScore = 2;
+                    break;
+                case R.id.scoreOneRbBlue: //else if(checkedButton == R.id.scoreOneRbBlue)
+                default: // else
+                    teamBlueScore = 1;
+                    break;
+            }
         }
 
         /*  1. Update the TextViews to show the score.
