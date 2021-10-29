@@ -93,11 +93,21 @@
 
             <!-- Score button for Team red -->
             <Button
-                android:id="@+id/btnTeamRedScore"
+                android:id="@+id/btnTeamRedScoreInc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="Score"
+                android:text="+"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnTeamRedScoreDec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="-"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
@@ -180,11 +190,21 @@
 
             <!-- Score button for Team blue -->
             <Button
-                android:id="@+id/btnTeamBlueScore"
+                android:id="@+id/btnTeamBlueScoreInc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="Score"
+                android:text="+"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnTeamBlueScoreDec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="-"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
