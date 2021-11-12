@@ -14,6 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!-- Following styles will be applied to all the buttons of the score keeper app -->
     <style name="teamButtonStyle" parent="Widget.MaterialComponents.Button">
         <item name="android:backgroundTint">@color/green</item>
         <item name="rippleColor">@color/red</item>
@@ -24,12 +25,14 @@
         <item name="android:layout_marginTop">30dp</item>
     </style>
 
+    <!-- Following styles will be applied to all the radio buttons of the score keeper app -->
     <style name="radioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <!-- Following styles will be applied to both team names of the score keeper app -->
     <style name="teamName" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -39,6 +42,7 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <!-- Following styles will be applied to text view for the both teams score of the score keeper app -->
     <style name="teamScore" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -47,6 +51,7 @@
         <item name="android:textSize">56sp</item>
         <item name="android:layout_marginTop">30dp</item>
     </style>
+
 
     <style name="teamLinLayout" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">match_parent</item>
@@ -60,6 +65,7 @@
     </style>
 
 
+    <!-- Following styles will be applied to the vertical line separating two teams. -->
     <style name="verticalSection">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -67,6 +73,7 @@
         <item name="android:orientation">horizontal</item>
     </style>
 
+    <!-- Following styles will be applied to the initial layout of the score keeper app -->
     <style name="initialSection">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
