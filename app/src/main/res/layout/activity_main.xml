@@ -4,113 +4,76 @@
         Lab 4.1 - Widgets/ Layouts
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical" >
+    style="@style/initialSection" >
 
     <!-- Below LinearLayout will create two vertical section on the screen. -->
 
+    //Reference: https://developer.android.com/guide/topics/ui/layout/linear
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:orientation="horizontal">
+        style="@style/verticalSection" >
 
         <!-- Create vertical score board for Team red (on the left)-->
         <LinearLayout
             android:id="@+id/ltTeamRed"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="16dp">
+            style="@style/teamLinLayout">
 
             <!-- Textview for "Team Red" -->
             <TextView
                 android:id="@+id/tvTeamRed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
                 android:text="TEAM RED"
-                android:textAllCaps="true"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+                style="@style/teamName"
+                />
 
             <!-- Text view to display score for Team red -->
             <TextView
                 android:id="@+id/teamRedScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="sans-serif-light"
                 android:text="0"
-                android:textAllCaps="true"
-                android:textColor="@color/black"
-                android:textSize="56sp" />
+                style="@style/teamScore" />
 
 
             <!-- Radio button group for points 1,2, 3, and 6 for Team red -->
             <RadioGroup
                 android:id="@+id/numScoreGroupRed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
+                style="@style/radioButtonStyle"
                 android:checkedButton="@id/scoreTwoRbRed"
                 android:orientation="vertical">
 
                 <!-- Radio button group for point 1 - Team red -->
                 <RadioButton
                     android:id="@+id/scoreOneRbRed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/radioButtonStyle"
                     android:text="1 Point" />
 
                 <!-- Radio button group for point 2 - Team red -->
                 <RadioButton
                     android:id="@+id/scoreTwoRbRed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/radioButtonStyle"
                     android:text="2 Points" />
 
                 <!-- Radio button group for point 3 - Team red -->
                 <RadioButton
                     android:id="@+id/scoreThreeRbRed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/radioButtonStyle"
                     android:text="3 Points" />
 
                 <!-- Radio button group for point 6 - Team red -->
                 <RadioButton
                     android:id="@+id/scoreSixRbRed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/radioButtonStyle"
                     android:text="6 Points" />
             </RadioGroup>
 
             <!-- Score button for Team red -->
             <Button
                 android:id="@+id/btnTeamRedScoreInc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
                 android:text="+"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
+                style="@style/teamButtonStyle" />
 
             <Button
                 android:id="@+id/btnTeamRedScoreDec"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
                 android:text="-"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
+                style="@style/teamButtonStyle"
+                />
 
 
         </LinearLayout>
@@ -118,96 +81,64 @@
         <!-- Create vertical score board for Team blue (on the right)-->
         <LinearLayout
             android:id="@+id/ltTeamblue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="16dp">
+            style="@style/teamLinLayout">
 
             <!-- Text view "Team Blue" -->
             <TextView
                 android:id="@+id/tvTeamBlue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
                 android:text="TEAM BLUE"
-                android:textAllCaps="true"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+                style="@style/teamName" />
 
             <!-- Text view to display score for Team Blue -->
             <TextView
                 android:id="@+id/teamBlueScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="sans-serif-light"
                 android:text="0"
-                android:textAllCaps="true"
-                android:textColor="@color/black"
-                android:textSize="56sp" />
+                style="@style/teamScore" />
 
             <!-- Radio button group for points 1,2, 3, and 6 for Team blue -->
             <RadioGroup
                 android:id="@+id/numScoreGroupBlue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
+                style="@style/radioButtonStyle"
                 android:checkedButton="@id/scoreTwoRbBlue"
                 android:orientation="vertical">
 
                 <!-- Radio button group for point 1 - Team blue -->
                 <RadioButton
                     android:id="@+id/scoreOneRbBlue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/radioButtonStyle"
                     android:text="1 Point" />
 
                 <!-- Radio button group for point 2 - Team blue -->
                 <RadioButton
                     android:id="@+id/scoreTwoRbBlue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/radioButtonStyle"
                     android:text="2 Points" />
 
                 <!-- Radio button group for point 3 - Team blue -->
                 <RadioButton
                     android:id="@+id/scoreThreeRbBlue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/radioButtonStyle"
                     android:text="3 Points" />
 
                 <!-- Radio button group for point 6 - Team blue -->
                 <RadioButton
                     android:id="@+id/scoreSixRbBlue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/radioButtonStyle"
                     android:text="6 Points" />
             </RadioGroup>
 
             <!-- Score button for Team blue -->
             <Button
                 android:id="@+id/btnTeamBlueScoreInc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                style="@style/teamButtonStyle"
                 android:text="+"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
+                 />
 
             <Button
                 android:id="@+id/btnTeamBlueScoreDec"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                style="@style/teamButtonStyle"
                 android:text="-"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
+                />
 
         </LinearLayout>
     </LinearLayout>
